@@ -10,14 +10,14 @@ namespace DemoAddin
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-    using XMLParserConversion;
+    using XinYu.XSD2Code;
     using System.IO;
     using EnvDTE80;
 
     /// <summary>
     /// TODO: Update summary.
     /// </summary>
-    public class Common
+    public class DataModel
     {
         #region Dte
         public static DTE2 ApplicationObject { get; set; }
@@ -32,6 +32,11 @@ namespace DemoAddin
             string protocolName = string.Empty;
             foreach (var item in protocolList)
             {
+                // For some reason, one of project cannot be load correctly.
+                if (item == null)
+                {
+                    continue;
+                }
 
                 if (item.Split(new char['-']) != null)
                 {
@@ -42,6 +47,7 @@ namespace DemoAddin
                     help.Add(protocolName);
                     protocol.Add(protocolName);
                 }
+
             }
             return protocol;
         }
@@ -53,7 +59,7 @@ namespace DemoAddin
         public static List<string> GetChangedTypes()
         {
             List<string> help = new List<string>();
-            List<AppliedRule> appliedRuleList = XMLParserConversion.Common.AppliedRuleList;
+            List<AppliedRule> appliedRuleList = XinYu.XSD2Code.Common.AppliedRuleList;
             if (appliedRuleList != null && appliedRuleList.Count > 0)
             {
                 foreach (var item in appliedRuleList)
@@ -74,16 +80,14 @@ namespace DemoAddin
         public static List<AppliedRule> GetRuleDetails(string changeType)
         {
             List<AppliedRule> temp = new List<AppliedRule>();
-            List<AppliedRule> appliedRuleList = XMLParserConversion.Common.AppliedRuleList;
+            List<AppliedRule> appliedRuleList = XinYu.XSD2Code.Common.AppliedRuleList;
             if (appliedRuleList != null && appliedRuleList.Count > 0)
             {
                 foreach (var item in appliedRuleList)
                 {
-                    string csFileName = item.CodeDocument.FullPath;
                     if (changeType == item.ChangedType.ToString())
                     {
-                        if (!item.CodeDocument.IsCommented)
-                            temp.Add(item);
+                        temp.Add(item);
                     }
                 }
             }

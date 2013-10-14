@@ -20,6 +20,10 @@
                     <StackPanel Orientation="Horizontal">
                         <Image Width="16" Height="16" Margin="4,0" Source="Images\Project.ico" />
                         <TextBlock Text="{Binding ProtocolName}" />
+                        <TextBlock Text=" (" />
+                        <TextBlock Text="{Binding SpanTime}" />
+                        <TextBlock Text=")" />
+
                     </StackPanel>
                 </HierarchicalDataTemplate>
 
@@ -27,6 +31,9 @@
                     <StackPanel Orientation="Horizontal">
                         <Image Width="16" Height="16" Margin="4,0" Source="Images\Rule_Task.ico" />
                         <TextBlock Text="{Binding ChangedType}" />
+                        <TextBlock Text=" (" />
+                        <TextBlock Text="{Binding ChangedTypeCount}" />
+                        <TextBlock Text=")" />
                     </StackPanel>
                 </HierarchicalDataTemplate>
 

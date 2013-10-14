@@ -4,23 +4,12 @@
         <name>DemoAddin</name>
     </assembly>
     <members>
-        <member name="T:DemoAddin.AnalysePanel">
+        <member name="T:DemoAddin.LoadOnDemand.TreeList">
             <summary>
-            Interaction logic for AnalysePanel.xaml
-            </summary>
-            <summary>
-            AnalysePanel
+            TreeList
             </summary>
         </member>
-        <member name="M:DemoAddin.AnalysePanel.FindSpecialProjectItem(System.String)">
-            <summary>
-            1. If return value is null, please make sure *.sln is opened.
-            2. No related csFile was found.
-            </summary>
-            <param name="csFile"></param>
-            <returns></returns>
-        </member>
-        <member name="M:DemoAddin.AnalysePanel.InitializeComponent">
+        <member name="M:DemoAddin.LoadOnDemand.TreeList.InitializeComponent">
             <summary>
             InitializeComponent
             </summary>
@@ -57,6 +46,50 @@
             <summary>
             Gets/sets whether the TreeViewItem
             associated with this object is selected.
+            </summary>
+        </member>
+        <member name="T:DemoAddin.LoadOnDemand.ExplorerViewModel">
+            <summary>
+            The ViewModel for the TreeListControl demo.  
+            </summary>
+        </member>
+        <member name="T:DemoAddin.DataModel">
+            <summary>
+            TODO: Update summary.
+            </summary>
+        </member>
+        <member name="T:DemoAddin.Root">
+            <remarks/>
+        </member>
+        <member name="P:DemoAddin.Root.Items">
+            <remarks/>
+        </member>
+        <member name="T:DemoAddin.RootItem">
+            <remarks/>
+        </member>
+        <member name="P:DemoAddin.RootItem.XSD">
+            <remarks/>
+        </member>
+        <member name="T:DemoAddin.RootItemXSD">
+            <remarks/>
+        </member>
+        <member name="P:DemoAddin.RootItemXSD.type">
+            <remarks/>
+        </member>
+        <member name="P:DemoAddin.RootItemXSD.Value">
+            <remarks/>
+        </member>
+        <member name="T:DemoAddin.XSDPanel">
+            <summary>
+            Interaction logic for XSDPanel.xaml
+            </summary>
+            <summary>
+            XSDPanel
+            </summary>
+        </member>
+        <member name="M:DemoAddin.XSDPanel.InitializeComponent">
+            <summary>
+            InitializeComponent
             </summary>
         </member>
         <member name="T:DemoAddin.Connect">
@@ -116,22 +149,23 @@
             add events handler to specific add-in events
             </summary>
         </member>
-        <member name="T:DemoAddin.LoadOnDemand.ExplorerViewModel">
+        <member name="T:DemoAddin.AnalysePanel">
             <summary>
-            The ViewModel for the TreeListControl demo.  
+            Interaction logic for AnalysePanel.xaml
+            </summary>
+            <summary>
+            AnalysePanel
             </summary>
         </member>
-        <member name="T:DemoAddin.Common">
+        <member name="M:DemoAddin.AnalysePanel.FindSpecialProjectItem(System.String)">
             <summary>
-            TODO: Update summary.
+            1. If return value is null, please make sure *.sln is opened.
+            2. No related csFile was found.
             </summary>
+            <param name="csFile"></param>
+            <returns></returns>
         </member>
-        <member name="T:DemoAddin.LoadOnDemand.TreeList">
-            <summary>
-            TreeList
-            </summary>
-        </member>
-        <member name="M:DemoAddin.LoadOnDemand.TreeList.InitializeComponent">
+        <member name="M:DemoAddin.AnalysePanel.InitializeComponent">
             <summary>
             InitializeComponent
             </summary>

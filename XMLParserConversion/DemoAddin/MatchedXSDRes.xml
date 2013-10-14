@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\AirSyncBase.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\asb.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\AirSync.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\as.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\AirSyncBase.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\asb.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\AutodiscoverRequest.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\adreq.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\Calendar.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\cal.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\ComposeMail.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\cm.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\Contacts.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\cntc.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\Contacts2.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\cntc2.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\DocumentLibrary.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\dl.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\Email.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\Email.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\Email2.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\Email2.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\FolderCreateRequest.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\fcreq.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\FolderDeleteRequest.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\fdreq.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\FolderHierarchy.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\fh.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\FolderSyncRequest.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\fsreq.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\FolderUpdateRequest.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\fureq.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\GAL.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\GAL.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\GetItemEstimate.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\giereq.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\ItemOperations.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\io.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\ItemOperationsRequest.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\ioreq.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\MeetingResponseRequest.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\mrreq.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\MoveItemsRequest.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\mireq.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\Notes.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\notes.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\PingRequest.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\pingreq.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\Provision.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\prov.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\ProvisionRequest.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\provreq.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\ResolveRecipientsRequest.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\rrreq.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\RightsManagement.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\rm.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\Search.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\srch.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\SearchRequest.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\srchreq.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\SendMailRequest.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\smreq.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\Settings.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\set.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\SettingsRequest.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\setreq.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\SmartForwardRequest.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\smreq.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\SmartReplyRequest.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\srreq.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\SyncRequest.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\syncreq.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\Tasks.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\tasks.xsd</XSD>
+    </Item>
+    <Item>
+        <XSD type="source">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\OriginalXSD\Response\ValidateCertRequest.xsd</XSD>
+        <XSD type="changed">D:\360云盘\GitHub\MOONLIGHT\XSDConversion\TestData\Resources\ChangedXSD\Response\vcreq.xsd</XSD>
+    </Item>
+</Root>

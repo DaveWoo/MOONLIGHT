@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Xin.SOMDiff
+namespace XinYu.SOMDiff
 {
     using System.Collections;
     using System.IO;
@@ -15,26 +15,26 @@ namespace Xin.SOMDiff
     {
         #region Fields
 
-        private static XmlSchema sourceXmlSchema = new XmlSchema();
-        private static XmlSchema changeXmlSchema = new XmlSchema();
+        private static XmlSchema sourceXmlSchema = null;
+        private static XmlSchema changeXmlSchema = null;
 
-        private static Dictionary<string, XmlSchema> sourceSchemaSet = new Dictionary<string, XmlSchema>();
-        private static Dictionary<string, XmlSchema> changeSchemaSet = new Dictionary<string, XmlSchema>();
+        private static Dictionary<string, XmlSchema> sourceSchemaSet = null;
+        private static Dictionary<string, XmlSchema> changeSchemaSet = null;
 
-        private static List<XmlSchemaFacet> removedFacets = new List<XmlSchemaFacet>();
-        private static List<XmlSchemaFacet> addedFacets = new List<XmlSchemaFacet>();
+        private static List<XmlSchemaFacet> removedFacets = null;
+        private static List<XmlSchemaFacet> addedFacets = null;
 
-        private static Stack<string> sourcePath = new Stack<string>();
-        private static Stack<string> changePath = new Stack<string>();
+        private static Stack<string> sourcePath = null;
+        private static Stack<string> changePath = null;
 
         private static List<MismatchedPair> result = new List<MismatchedPair>();
-        private static Dictionary<string, SchemaTypeCollection> sourceSchemaTypeCollection = new Dictionary<string, SchemaTypeCollection>();
-        private static Dictionary<string, SchemaTypeCollection> changeSchemaTypeCollection = new Dictionary<string, SchemaTypeCollection>();
+        private static Dictionary<string, SchemaTypeCollection> sourceSchemaTypeCollection = null;
+        private static Dictionary<string, SchemaTypeCollection> changeSchemaTypeCollection = null;
 
-        private static Dictionary<string, Dictionary<string, XmlSchemaGroup>> sourceSchemaGroups = new Dictionary<string, Dictionary<string, XmlSchemaGroup>>();
-        private static Dictionary<string, Dictionary<string, XmlSchemaGroup>> changeSchemaGroups = new Dictionary<string, Dictionary<string, XmlSchemaGroup>>();
+        private static Dictionary<string, Dictionary<string, XmlSchemaGroup>> sourceSchemaGroups = null;
+        private static Dictionary<string, Dictionary<string, XmlSchemaGroup>> changeSchemaGroups = null;
 
-        private static Dictionary<string, string> comparedGroups = new Dictionary<string, string>();
+        private static Dictionary<string, string> comparedGroups = null;
 
         #endregion
 
@@ -42,8 +42,7 @@ namespace Xin.SOMDiff
 
         public SOMDiff()
         {
-            sourcePath.Clear();
-            changePath.Clear();
+            Initial();
         }
 
         #endregion
@@ -60,6 +59,30 @@ namespace Xin.SOMDiff
             {
                 return result;
             }
+        }
+
+        public static void Initial()
+        {
+            sourceXmlSchema = new XmlSchema();
+            changeXmlSchema = new XmlSchema();
+
+            sourceSchemaSet = new Dictionary<string, XmlSchema>();
+            changeSchemaSet = new Dictionary<string, XmlSchema>();
+
+            removedFacets = new List<XmlSchemaFacet>();
+            addedFacets = new List<XmlSchemaFacet>();
+
+            sourcePath = new Stack<string>();
+            changePath = new Stack<string>();
+
+            result = new List<MismatchedPair>();
+            sourceSchemaTypeCollection = new Dictionary<string, SchemaTypeCollection>();
+            changeSchemaTypeCollection = new Dictionary<string, SchemaTypeCollection>();
+
+            sourceSchemaGroups = new Dictionary<string, Dictionary<string, XmlSchemaGroup>>();
+            changeSchemaGroups = new Dictionary<string, Dictionary<string, XmlSchemaGroup>>();
+
+            comparedGroups = new Dictionary<string, string>();
         }
 
         #endregion
@@ -118,12 +141,17 @@ namespace Xin.SOMDiff
                                     // TODO
                                 }
                             }
-
-                            externalReferences.Add(schemaLocation, references);
+                            if (!externalReferences.ContainsKey(schemaLocation))
+                            {
+                                externalReferences.Add(schemaLocation, references);
+                            }
                         }
                         else
                         {
-                            externalReferences.Add(schemaLocation, null);
+                            if (!externalReferences.ContainsKey(schemaLocation))
+                            {
+                                externalReferences.Add(schemaLocation, null);
+                            }
                         }
                     }
                 }
@@ -337,7 +365,14 @@ namespace Xin.SOMDiff
                         sourcePath.Push(element.Name);
 
                         // Change: add a new element
-                        this.AddMismatchedPair(sourcePath.ToArray(), element, changePath.ToArray(), null, ChangeTypes.Element_Remove);
+                        // Commented by Dave 10-14-2013, source and changed path maybe at least have more than 1 element.
+                        // this.AddMismatchedPair(sourcePath.ToArray(), element, changePath.ToArray(), null, ChangeTypes.Element_Remove);
+
+                        // Changed by Dave 10-14-2013
+                        if (changePath != null && changePath.Count > 0)
+                        {
+                            this.AddMismatchedPair(sourcePath.ToArray(), element, changePath.ToArray(), null, ChangeTypes.Element_Remove);
+                        }
                     }
 
                     sourcePath.Pop();
@@ -361,7 +396,13 @@ namespace Xin.SOMDiff
                         changePath.Push(element.Name);
 
                         // Change: add a new element
-                        this.AddMismatchedPair(sourcePath.ToArray(), null, changePath.ToArray(), element, ChangeTypes.Element_Add);
+                        // Commented by Dave 10-14-2013, source and changed path maybe at least have more than 1 element.
+                        // this.AddMismatchedPair(sourcePath.ToArray(), null, changePath.ToArray(), element, ChangeTypes.Element_Add);
+                        // Changed by Dave 10-14-2013
+                        if (sourcePath != null && sourcePath.Count > 0)
+                        {
+                            this.AddMismatchedPair(sourcePath.ToArray(), null, changePath.ToArray(), element, ChangeTypes.Element_Add);
+                        }
                     }
 
                     changePath.Pop();
@@ -372,20 +413,6 @@ namespace Xin.SOMDiff
         private void CompareSingleElement(XmlSchemaElement element1, XmlSchemaElement element2)
         {
             ChangeTypes changeType = ChangeTypes.None;
-
-            #region Code for debug
-
-            //if (element1.Name == "Properties")
-            //{
-
-            //}
-
-            //if (element1.RefName.Name == "Supported")
-            //{
-
-            //}
-
-            #endregion
 
             // if element else ref-element
             if (element1.RefName.IsEmpty && element2.RefName.IsEmpty)
@@ -1686,24 +1713,36 @@ namespace Xin.SOMDiff
         private ChangeTypes CompareFacetMinOccurs(string minOccursString1, string minOccursString2)
         {
             ChangeTypes changeType = ChangeTypes.None;
-
-            if (!string.IsNullOrEmpty(minOccursString1) && !string.IsNullOrEmpty(minOccursString2))
+            try
             {
-                if (minOccursString1 != minOccursString2)
+                lock (this)
                 {
-                    // Change: minOccurs
-                    changeType = this.CompareQuantifiers(Convert.ToInt32(minOccursString1), Convert.ToInt32(minOccursString2)) ? ChangeTypes.DecreasedMinOccurs : ChangeTypes.IncreasedMinOccurs;
+                    if (!string.IsNullOrEmpty(minOccursString1) && !string.IsNullOrEmpty(minOccursString2))
+                    {
+                        if (minOccursString1 != minOccursString2)
+                        {
+                            // Change: minOccurs
+                            changeType = this.CompareQuantifiers(Convert.ToInt32(minOccursString1), Convert.ToInt32(minOccursString2)) ? ChangeTypes.DecreasedMinOccurs : ChangeTypes.IncreasedMinOccurs;
+                        }
+                    }
+                    else if (!string.IsNullOrEmpty(minOccursString1))
+                    {
+                        changeType = ChangeTypes.RemoveMinOccurs;
+                    }
+                    else if (!string.IsNullOrEmpty(minOccursString2))
+                    {
+                        changeType = ChangeTypes.AddMinOccurs;
+                    }
                 }
             }
-            else if (!string.IsNullOrEmpty(minOccursString1))
+            catch (StackOverflowException)
             {
-                changeType = ChangeTypes.RemoveMinOccurs;
+                throw;
             }
-            else if (!string.IsNullOrEmpty(minOccursString2))
+            catch (Exception)
             {
-                changeType = ChangeTypes.AddMinOccurs;
+                throw;
             }
-
             return changeType;
         }
 
@@ -2272,8 +2311,11 @@ namespace Xin.SOMDiff
                 {
                     SchemaTypeCollection collection = new SchemaTypeCollection();
                     collection.Add(schemaType);
-
-                    schemaTypeCollection.Add(string.Format("{0}:{1}", schemaType.QualifiedName.Namespace, schemaType.QualifiedName.Name), collection);
+                    string key = string.Format("{0}:{1}", schemaType.QualifiedName.Namespace, schemaType.QualifiedName.Name);
+                    if (!schemaTypeCollection.ContainsKey(key))
+                    {
+                        schemaTypeCollection.Add(key, collection);
+                    }
                 }
 
                 if (schema.Groups != null && schema.Groups.Count > 0)
@@ -2284,8 +2326,10 @@ namespace Xin.SOMDiff
                     {
                         groups.Add(group.Name, group);
                     }
-
-                    schemaGroups.Add(schema.TargetNamespace, groups);
+                    if (!schemaGroups.ContainsKey(schema.TargetNamespace))
+                    {
+                        schemaGroups.Add(schema.TargetNamespace, groups);
+                    }
                 }
 
                 // get the schema to check

@@ -11,11 +11,11 @@ namespace DemoAddin.LoadOnDemand
     {
         private readonly ReadOnlyCollection<ProtocolViewModel> protocols;
 
-        public ExplorerViewModel(List<string> level1List)
+        public ExplorerViewModel(List<string> level1List, string spanTime)
         {
             protocols = new ReadOnlyCollection<ProtocolViewModel>(
                 (from protocol in level1List
-                 select new ProtocolViewModel(protocol))
+                 select new ProtocolViewModel(protocol, spanTime))
                 .ToList());
         }
 
