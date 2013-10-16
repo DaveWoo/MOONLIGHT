@@ -1,0 +1,2 @@
+Stylecop version:4.7.45.0
+source code: http://stylecop.codeplex.com/SourceControl/latest
