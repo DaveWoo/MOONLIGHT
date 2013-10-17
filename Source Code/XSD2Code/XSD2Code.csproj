@@ -42,10 +42,10 @@
     <Reference Include="Microsoft.Build.Framework" />
     <Reference Include="Microsoft.Build.Utilities.v4.0" />
     <Reference Include="StyleCop">
-      <HintPath>Lib\StyleCop.dll</HintPath>
+      <HintPath>..\Lib\StyleCop.dll</HintPath>
     </Reference>
     <Reference Include="StyleCop.CSharp">
-      <HintPath>Lib\StyleCop.CSharp.dll</HintPath>
+      <HintPath>..\Lib\StyleCop.CSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
