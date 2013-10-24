@@ -28,7 +28,7 @@
         public AnalysePanel()
         {
             InitializeComponent();
-            this.Initial();
+            // this.Initial();
         }
 
         private void Initial()
@@ -58,7 +58,7 @@
                 xsdPanel.ShowDialog();
 
                 string filePath = DataModel.ApplicationObject.Solution.FullName;
-                  filePath = @"D:\O15\TestSuites\Exchange\Platinum\ExchangeServerEASProtocolTestSuites\Exchange Server EAS Protocol Test Suites\Source\MS-ASCMD - Copy\MS-ASCMD.sln";
+                filePath = @"D:\O15\TestSuites\Exchange\Platinum\ExchangeServerEASProtocolTestSuites\Exchange Server EAS Protocol Test Suites\Source\MS-ASCMD - Copy\MS-ASCMD.sln";
                 if (xsdPanel.XSDInfo == null)
                 {
                     MessageBox.Show("NO xsd file was selected, Please select a couple xsd files firstly.", "Demo", MessageBoxButton.OK);

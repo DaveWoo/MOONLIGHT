@@ -6,7 +6,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{D43C7135-3657-411F-A77D-C097B327BE4A}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>XinYu.XSD2Code</RootNamespace>
     <AssemblyName>XinYu.XSD2Code</AssemblyName>
